@@ -6,7 +6,6 @@ client_secret = 'XXX'
 username = 'XXX'
 password = 'XXX'
 
-subreddit_name = 'your_subreddit_name'
 
 try:
     reddit = praw.Reddit(
