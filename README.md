@@ -1,2 +1,2 @@
 # RedditCommentCleaner
-Deletes Reddit comments every x days
+This Python script Reddit comments every x days
