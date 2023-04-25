@@ -52,6 +52,7 @@ if time.time() - comment.created_utc > 4 * 24 * 60 * 60:
 
 
 -RUNNING THE SCRIPT-
+
 1. Copy commentCleaner.py code into notepad and save it in whatevery directory you prefer as commentCleaner.py, alternatively you can copy the repository using the following command in Windows terminal:
 
 ```
@@ -64,7 +65,7 @@ git clone https://github.com/905timur/RedditCommentCleaner.git
 cd C:\commentCleaner
 ```
 
-4. Once in the same directory as redditCleaner.py, run the following command:
+3. Once in the same directory as redditCleaner.py, run the following command:
 
 ```
 python commentCleaner.py
