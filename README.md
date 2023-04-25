@@ -66,4 +66,5 @@ cd C:\redditCleaner
 4. Once in the same directory as redditCleaner.py, run the following command:
 
 ```
-python redditCleaner.py```
+python redditCleaner.py
+```
