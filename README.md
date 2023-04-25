@@ -61,7 +61,7 @@ git clone https://github.com/905timur/RedditCommentCleaner.git
 2. In Windows terminal, navigate to wherever you saved the commentCleaner.py by using the "cd" command, for example:
 
 ```
-cd C:\redditCleaner
+cd C:\commentCleaner
 ```
 
 4. Once in the same directory as redditCleaner.py, run the following command:
