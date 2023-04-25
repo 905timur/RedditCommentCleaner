@@ -35,7 +35,7 @@ Once your app is created, you will see your client ID, and secret. Both are high
 
 ![image](https://user-images.githubusercontent.com/130249301/234361938-e09c0f87-e6b8-4b6b-9916-593b4bbcf35d.png)
 
-1. Replace XXX with your client ID, secret, reddit username and passowrd into the following part of the script:
+1. Replace XXX with your client ID, secret, reddit username and password into the following part of the script:
 
 ```
 client_id = 'XXX'
