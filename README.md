@@ -57,7 +57,7 @@ if time.time() - comment.created_utc > 4 * 24 * 60 * 60:
 
 2. Hit "Enter"
 
-3. Navigate to wherever you saved the redditCleaner.py by using the "cd" command, for example:
+3. Navigate to wherever you saved the commentCleaner.py by using the "cd" command, for example:
 
 ```
 cd C:\redditCleaner
@@ -66,5 +66,5 @@ cd C:\redditCleaner
 4. Once in the same directory as redditCleaner.py, run the following command:
 
 ```
-python redditCleaner.py
+python commentCleaner.py
 ```
