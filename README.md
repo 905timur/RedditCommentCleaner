@@ -24,4 +24,6 @@ pip install praw
 
 4. Fill out the discription, and both URL fields (you can point both fields to this README)
 
+5 Click 'create app'
+
 ![image](https://user-images.githubusercontent.com/130249301/234336730-dbe61b3f-ffed-4f1f-ab35-b5fe1239d72c.png)
