@@ -37,4 +37,4 @@ while True:
         print("The script ran successfully and deleted {} comments.".format(len(comments_deleted)))
         comments_deleted = []
     else:
-        print("There were no comments to delete.")
+        print("There was no comments to delete.")
