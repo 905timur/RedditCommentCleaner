@@ -22,7 +22,7 @@ pip install praw
 
 3. Select "script"
 
-4. Fill out the discription, and both URL fields (you can point both fields to this README)
+4. Fill out the discription, and both URL and URI fields (you can point both fields to this Github page)
 
 5. Click 'create app'
 
