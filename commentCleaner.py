@@ -28,9 +28,13 @@ def delete_old_comments():
             comment.delete()
             comments_deleted.append(comment)
 
-delete_old_comments()
+while True:
+    print("Working...", end="\r")
+    delete_old_comments()
+    time.sleep(1) 
 
-if len(comments_deleted) > 0:
-    print("The script ran successfully and deleted {} comments.".format(len(comments_deleted)))
-else:
-    print("There was no comments to delete.")
+    if len(comments_deleted) > 0:
+        print("The script ran successfully and deleted {} comments.".format(len(comments_deleted)))
+        comments_deleted = []
+    else:
+        print("There were no comments to delete.")
