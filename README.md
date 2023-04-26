@@ -65,7 +65,7 @@ git clone https://github.com/905timur/RedditCommentCleaner.git
 cd C:\commentCleaner
 ```
 
-3. Once in the same directory as commenttCleaner.py, run the following command:
+3. Once in the same directory as commentCleaner.py, run the following command:
 
 ```
 python commentCleaner.py
