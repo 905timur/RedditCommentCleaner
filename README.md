@@ -38,7 +38,7 @@ Once your app is created, you will see your client ID, and secret. Both are high
 
 1. When the script is executed, you will be prompted to enter your Client ID, secret, username and password.
 
-2. The last prompt will ask you how old the comments should be that are being deleted. For example, if you enter "4", all comments older than 4 daays old will be deleted.
+2. The last prompt will ask you how old the comments should be that are being deleted. For example, if you enter "4", all comments older than 4 days old will be deleted.
 
 
 
