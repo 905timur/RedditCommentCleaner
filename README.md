@@ -1,7 +1,7 @@
 # Reddit Comment Cleaner v1.0
 This Python script edits any Reddit comments older than x amount of days.
 
-To run this script:
+*PLEASE USE ONLY commentCleaner.py, commentCleaner-v0.4 has to be manually configured and I do not recommend using it.
 
 -SYSTEM CONFIGURATION-
 
