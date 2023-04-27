@@ -1,9 +1,10 @@
 # Reddit Comment Cleaner v1.0
-This Python script edits any Reddit comments older than x amount of days.
 
-*PLEASE USE ONLY commentCleaner.py, commentCleaner-v0.4 has to be manually configured and I do not recommend using it.
+This Python script edits any Reddit comments older than x amount of days to "." and then deletes them.
 
--SYSTEM CONFIGURATION-
+**<u>PLEASE USE ONLY commentCleaner.py, commentCleaner-v0.4 has to be manually configured and I do not recommend using it.**</u>
+
+**-SYSTEM CONFIGURATION-**
 
 1. Install Python 3. 
 
@@ -14,7 +15,7 @@ pip install praw
 ```
 
 
--REDDIT CONFIGURATION-
+**-REDDIT CONFIGURATION-**
 
 1. Navigate to https://www.reddit.com/prefs/apps
 
@@ -29,7 +30,7 @@ pip install praw
 ![image](https://user-images.githubusercontent.com/130249301/234336730-dbe61b3f-ffed-4f1f-ab35-b5fe1239d72c.png)
 
 
--SCRIPT CONFIGURATION-
+**-SCRIPT CONFIGURATION-**
 
 Once your app is created, you will see your client ID, and secret. Both are highlighted below:
 
