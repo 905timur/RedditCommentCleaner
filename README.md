@@ -62,3 +62,5 @@ cd C:\commentCleaner
 ```
 python commentCleaner.py
 ```
+
+4. Fill out all the prompts. 
