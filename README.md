@@ -1,5 +1,5 @@
-# Reddit Comment Cleaner v0.4
-This Python script edits any Reddit comments older than 4 days to "." and then deletes them. 
+# Reddit Comment Cleaner v1.0
+This Python script edits any Reddit comments older than x amount of days.
 
 To run this script:
 
@@ -35,20 +35,11 @@ Once your app is created, you will see your client ID, and secret. Both are high
 
 ![image](https://user-images.githubusercontent.com/130249301/234361938-e09c0f87-e6b8-4b6b-9916-593b4bbcf35d.png)
 
-1. Replace XXX with your client ID, secret, reddit username and password into the following part of the script:
+1. When the script is executed, you will be prompted to enter your Client ID, secret, username and password.
 
-```
-client_id = 'XXX'
-client_secret = 'XXX'
-username = 'XXX'
-password = 'XXX'
-```
+2. The last prompt will ask you how old the comments should be that are being deleted. For example, if you enter "4", all comments older than 4 daays old will be deleted.
 
-2. (OPTIONAL) If you would like the script to delete comments either older or younger than 4 days, replace 4 with however many days you want in the following line of code:
 
-```
-if time.time() - comment.created_utc > 4 * 24 * 60 * 60:
-```
 
 
 -RUNNING THE SCRIPT-
