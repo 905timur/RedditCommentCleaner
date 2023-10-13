@@ -1,4 +1,4 @@
-# Reddit Comment Cleaner v1.0
+# Reddit Comment Cleaner v1.5
 
 This Python script edits any Reddit comments older than x amount of days to "." and then deletes them.
 
