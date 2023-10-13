@@ -2,7 +2,6 @@
 
 This Python script edits any Reddit comments older than x amount of days to "." and then deletes them.
 
-**<u>PLEASE USE ONLY commentCleaner.py, commentCleaner-v0.4 has to be manually configured and I do not recommend using it.**</u>
 
 **-SYSTEM CONFIGURATION-**
 
