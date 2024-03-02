@@ -8,10 +8,12 @@ def get_reddit_credentials():
     Returns:
         tuple: A tuple containing client_id, client_secret, username, and password.
     """
+
     client_id = input("Enter your Reddit client ID: ")
     client_secret = input("Enter your Reddit client secret: ")
     username = input("Enter your Reddit username: ")
     password = input("Enter your Reddit password: ")
+
     return client_id, client_secret, username, password
 
 def get_days_old():
@@ -62,6 +64,7 @@ def initialize_reddit(client_id, client_secret, username, password):
             validate_on_submit=True 
         )
         reddit.user.me()
+        print("Authenticated successfully.")
         return reddit
     except praw.exceptions.APIException as e:
         print("Error: Could not authenticate with the provided credentials.")
@@ -113,6 +116,30 @@ def remove_comments_with_negative_karma(reddit, username, comments_deleted):
                 comments_deleted.append(comment)
             except praw.exceptions.APIException as e:
                 print(f"Error removing comment: {e}")
+                
+                
+def remove_comments_with_one_karma_and_no_replies(reddit, username, comments_deleted):
+    """
+    Remove comments with one karma and no replies.
+
+    Args:
+        reddit (praw.Reddit): Authenticated Reddit instance.
+        username (str): Reddit username.
+        comments_deleted (list): A list to store deleted comments.
+
+    Notes:
+        This function will remove comments with a karma score of 1 and no replies.
+    """
+    for comment in reddit.redditor(username).comments.new(limit=None):
+        if comment.score == 1 and len(comment.replies) == 0:
+            with open('deleted_comments.txt', 'a') as f:
+                f.write(comment.body + '\n')
+            try:
+                comment.edit(".")
+                comment.delete()
+                comments_deleted.append(comment)
+            except praw.exceptions.APIException as e:
+                print(f"Error removing comment: {e}")
 
 def main():
     client_id, client_secret, username, password = get_reddit_credentials()
@@ -126,7 +153,7 @@ def main():
     comments_deleted = []
 
     while True:
-        action = input("Choose an action (1 - Delete old comments, 2 - Remove comments with negative karma, 3 - Quit): ")
+        action = input("Choose an action (1 - Delete old comments, 2 - Remove comments with negative karma, 3 - Remove comments with 1 karma and no replies, 4 - Quit): ")
 
         if action == '1':
             print("Working (Deleting old comments)...", end="\r")
@@ -136,6 +163,9 @@ def main():
             print("Working (Removing comments with negative karma)...", end="\r")
             remove_comments_with_negative_karma(reddit, username, comments_deleted)
         elif action == '3':
+            print("Working (Removing comments with one karma and no replies)...", end="\r")
+            remove_comments_with_one_karma_and_no_replies(reddit, username, comments_deleted)
+        elif action == '4':
             break
         else:
             print("Invalid choice. Please select a valid option.")
