@@ -1,8 +1,7 @@
-# Reddit Comment Cleaner v1.0
+# Reddit Comment Cleaner v1.8
 
 This Python script edits any Reddit comments older than x amount of days to "." and then deletes them.
 
-**<u>PLEASE USE ONLY commentCleaner.py, commentCleaner-v0.4 has to be manually configured and I do not recommend using it.**</u>
 
 **-SYSTEM CONFIGURATION-**
 
@@ -64,3 +63,28 @@ python commentCleaner.py
 ```
 
 4. Fill out all the prompts. 
+
+```
+Do you want to run the script? (yes/no): 
+```
+
+```
+Credentials
+- client_id
+- client_secret
+- username
+- password
+```
+
+```
+Run options
+1. Remove all comments older than x days
+2. Remove comments with negative karma
+3. Remove comments with 1 karma and no replies
+4. Quit
+```
+
+5. Once you have filled out all the prompts, the script will run and delete all comments in the selected category. It will return a txt file with all the comments that were deleted.
+
+For further suggestions or questions, please contact me or open an issue on this repository.
+
