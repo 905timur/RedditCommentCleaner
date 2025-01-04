@@ -1,90 +1,101 @@
-# Reddit Comment Cleaner v1.8
+# Reddit Comment Cleaner v1.9
 
-This Python script edits any Reddit comments older than x amount of days to "." and then deletes them.
+This Python script edits any Reddit comments older than a specified number of days to "." and then deletes them. It also provides options to delete comments with negative karma or those with specific criteria.
 
+---
 
-**-SYSTEM CONFIGURATION-**
+## **SYSTEM CONFIGURATION**
 
-1. Install Python 3. 
+1. Install Python 3.
 
-2. Install praw by running the following code in terminal:
+2. Install `praw` by running the following command in your terminal:
 
-```
-pip install praw
-```
+    ```bash
+    pip install praw
+    ```
 
+---
 
-**-REDDIT CONFIGURATION-**
+## **REDDIT CONFIGURATION**
 
-1. Navigate to https://www.reddit.com/prefs/apps
+1. Navigate to [Reddit Apps Preferences](https://www.reddit.com/prefs/apps).
 
-2. Click "Create application" at the bottom of the page
+2. Click "Create application" at the bottom of the page.
 
-3. Select "script"
+3. Select "script".
 
-4. Fill out the discription, and both URL and URI fields (you can point both fields to this Github page)
+4. Fill out the description, and both the URL and redirect URI fields (you can point both fields to this GitHub page).
 
-5. Click 'create app'
+5. Click "create app".
 
-![image](https://user-images.githubusercontent.com/130249301/234336730-dbe61b3f-ffed-4f1f-ab35-b5fe1239d72c.png)
+    ![image](https://user-images.githubusercontent.com/130249301/234336730-dbe61b3f-ffed-4f1f-ab35-b5fe1239d72c.png)
 
+6. Once your app is created, you will see your client ID and client secret. Both are highlighted below:
 
-**-SCRIPT CONFIGURATION-**
+    ![image](https://user-images.githubusercontent.com/130249301/234361938-e09c0f87-e6b8-4b6b-9916-593b4bbcf35d.png)
 
-Once your app is created, you will see your client ID, and secret. Both are highlighted below:
+---
 
-![image](https://user-images.githubusercontent.com/130249301/234361938-e09c0f87-e6b8-4b6b-9916-593b4bbcf35d.png)
+## **SCRIPT CONFIGURATION**
 
-1. When the script is executed, you will be prompted to enter your Client ID, secret, username and password.
+1. Create a file named `credentials.txt` in the same directory as the script. This file should contain your Reddit API credentials in the following format:
 
-2. The last prompt will ask you how old the comments should be that are being deleted. For example, if you enter "4", all comments older than 4 days old will be deleted.
+    ```
+    Your app ID
+    Your secret
+    Your username
+    Your password
+    ```
 
+2. Save the file.
 
+---
 
+## **RUNNING THE SCRIPT**
 
--RUNNING THE SCRIPT-
+1. Clone this repository using the following command in your terminal:
 
-1. Copy commentCleaner.py code into notepad and save it in whatevery directory you prefer as commentCleaner.py, alternatively you can copy the repository using the following command in Windows terminal:
+    ```bash
+    git clone https://github.com/905timur/RedditCommentCleaner.git
+    ```
 
-```
-git clone https://github.com/905timur/RedditCommentCleaner.git
-```
+2. Navigate to the directory where you cloned the repository:
 
-2. In Windows terminal, navigate to wherever you saved the commentCleaner.py by using the "cd" command, for example:
+    ```bash
+    cd RedditCommentCleaner
+    ```
 
-```
-cd C:\commentCleaner
-```
+3. Run the script using the following command:
 
-3. Once in the same directory as commentCleaner.py, run the following command:
+    ```bash
+    python commentCleaner.py
+    ```
 
-```
-python commentCleaner.py
-```
+4. You will be prompted to choose one of the following options:
 
-4. Fill out all the prompts. 
+    ```
+    Run options
+    1. Remove all comments older than x days
+    2. Remove comments with negative karma
+    3. Remove comments with 1 karma and no replies
+    4. Quit
+    ```
 
-```
-Do you want to run the script? (yes/no): 
-```
+5. Follow the instructions for the selected option. Deleted comments will be logged in a file named `deleted_comments.txt` in the same directory as the script.
 
-```
-Credentials
-- client_id
-- client_secret
-- username
-- password
-```
+---
 
-```
-Run options
-1. Remove all comments older than x days
-2. Remove comments with negative karma
-3. Remove comments with 1 karma and no replies
-4. Quit
-```
+## **NOTES**
 
-5. Once you have filled out all the prompts, the script will run and delete all comments in the selected category. It will return a txt file with all the comments that were deleted.
+- Ensure the `credentials.txt` file exists and follows the specified format. The script will exit if this file is not found.
+- Deleted comments are saved in `deleted_comments.txt`, including their timestamp, score, and original text.
+
+---
+
+## **CHANGELOG**
+
+### v1.9
+- Removed credential prompts from the script; credentials are now loaded from a `credentials.txt` file.
+- Replaced deprecated `datetime` methods with timezone-aware implementations for improved reliability.
 
 For further suggestions or questions, please contact me or open an issue on this repository.
-
