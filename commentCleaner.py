@@ -1,5 +1,6 @@
 import praw
 import time
+import random
 from datetime import datetime, timedelta, timezone
 
 def get_reddit_credentials(credentials_file="credentials.txt"):
@@ -86,6 +87,9 @@ def delete_old_comments(reddit, username, days_old, comments_deleted):
             except praw.exceptions.APIException as e:
                 print(f"Error deleting comment: {e}")
 
+            # Add a random delay of 6-8 seconds between API calls
+            time.sleep(random.uniform(6, 8))
+
 def remove_comments_with_negative_karma(reddit, username, comments_deleted):
     """
     Remove comments with negative karma.
@@ -107,6 +111,9 @@ def remove_comments_with_negative_karma(reddit, username, comments_deleted):
                 comments_deleted.append(comment)
             except praw.exceptions.APIException as e:
                 print(f"Error removing comment: {e}")
+
+            # Add a random delay of 6-8 seconds between API calls
+            time.sleep(random.uniform(6, 8))
 
 def remove_comments_with_one_karma_and_no_replies(reddit, username, comments_deleted):
     """
@@ -130,6 +137,9 @@ def remove_comments_with_one_karma_and_no_replies(reddit, username, comments_del
                 comments_deleted.append(comment)
             except praw.exceptions.APIException as e:
                 print(f"Error removing comment: {e}")
+
+            # Add a random delay of 6-8 seconds between API calls
+            time.sleep(random.uniform(6, 8))
 
 def main():
     client_id, client_secret, username, password = get_reddit_credentials()
