@@ -1,4 +1,4 @@
-# Reddit Comment Cleaner v1.9
+# Reddit Comment Cleaner v1.9.1
 
 This Python script edits any Reddit comments older than a specified number of days to "." and then deletes them. It also provides options to delete comments with negative karma or those with specific criteria.
 
@@ -97,5 +97,8 @@ This Python script edits any Reddit comments older than a specified number of da
 ### v1.9
 - Removed credential prompts from the script; credentials are now loaded from a `credentials.txt` file.
 - Replaced deprecated `datetime` methods with timezone-aware implementations for improved reliability.
+
+### v1.9.1
+- Added (randomized) 6-8 second delay between deletions to circumvent API rate limit. 
 
 For further suggestions or questions, please contact me or open an issue on this repository.
