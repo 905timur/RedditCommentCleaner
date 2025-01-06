@@ -38,7 +38,13 @@ This Python script edits any Reddit comments older than a specified number of da
 
 ## **SCRIPT CONFIGURATION**
 
-1. Create a file named `credentials.txt` in the same directory as the script. This file should contain your Reddit API credentials in the following format:
+1. Clone this repository using the following command in your terminal:
+
+    ```bash
+    git clone https://github.com/905timur/RedditCommentCleaner.git
+    ```
+    
+2. Create a file named `credentials.txt` in the same directory as the script. This file should contain your Reddit API credentials in the following format:
 
     ```
     Your app ID
@@ -47,17 +53,11 @@ This Python script edits any Reddit comments older than a specified number of da
     Your password
     ```
 
-2. Save the file.
+3. Save the file.
 
 ---
 
 ## **RUNNING THE SCRIPT**
-
-1. Clone this repository using the following command in your terminal:
-
-    ```bash
-    git clone https://github.com/905timur/RedditCommentCleaner.git
-    ```
 
 2. Navigate to the directory where you cloned the repository:
 
