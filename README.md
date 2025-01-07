@@ -2,6 +2,9 @@
 
 This Python script edits any Reddit comments older than a specified number of days to "." and then deletes them. It also provides options to delete comments with negative karma or those with specific criteria.
 
+If you don't want to install and configure the script locally, the alpha version of v2.0 repository is [available as a web UI here](https://papaya-pavlova-033cd8.netlify.app/). You still have to follow the Reddit Configurtion section below to use the web interface. 
+
+
 ---
 
 ## **SYSTEM CONFIGURATION**
